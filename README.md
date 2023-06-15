@@ -1,6 +1,6 @@
 # flutter_camera_overlay_new
 
-# Android 13 support 
+# Support Android 13  
 
 This package provides a simple camera overlay to aid capture of documents such 
 as national ID cards, passports and driving licenses.
