@@ -4,16 +4,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_camera_overlay_new/model.dart';
 import 'package:flutter_camera_overlay_new/overlay_shape.dart';
 
-
-
 typedef XFileCallback = void Function(XFile file);
 
- myCameras (){
-    return  availableCameras();
-
-  }
-  // CameraDescription cameraDescription;
-
+myCameras() {
+  return availableCameras();
+}
+// CameraDescription cameraDescription;
 
 class CameraOverlay extends StatefulWidget {
   const CameraOverlay(
@@ -50,7 +46,11 @@ class _FlutterCameraOverlayState extends State<CameraOverlay> {
   @override
   void initState() {
     super.initState();
-    controller = CameraController(widget.camera, ResolutionPreset.max);
+    controller = CameraController(
+      widget.camera,
+      ResolutionPreset.max,
+      enableAudio: false,
+    );
     controller.initialize().then((_) {
       if (!mounted) {
         return;
