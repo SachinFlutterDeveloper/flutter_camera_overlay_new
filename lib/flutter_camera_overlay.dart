@@ -118,8 +118,8 @@ class _FlutterCameraOverlayState extends State<CameraOverlay> {
                 )),
           ),
         if (widget.enableCaptureButton)
-          Align(
-            alignment: Alignment.bottomCenter,
+          Positioned(
+            bottom: 20,
             child: Material(
                 color: Colors.transparent,
                 child: Container(
@@ -145,6 +145,18 @@ class _FlutterCameraOverlayState extends State<CameraOverlay> {
                       iconSize: 72,
                     ))),
           ),
+        Positioned(
+          top: 18,
+          left: 2,
+          child: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(
+                Icons.arrow_back_ios_new_outlined,
+                size: 25,
+              )),
+        ),
       ],
     );
   }
