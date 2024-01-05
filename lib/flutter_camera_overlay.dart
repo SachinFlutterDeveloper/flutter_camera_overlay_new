@@ -152,10 +152,8 @@ class _FlutterCameraOverlayState extends State<CameraOverlay> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: const Icon(
-                Icons.arrow_back_ios_new_outlined,
-                size: 25,
-              )),
+              icon: const Icon(Icons.arrow_back_ios_new_outlined,
+                  size: 25, color: Colors.white)),
         ),
       ],
     );
